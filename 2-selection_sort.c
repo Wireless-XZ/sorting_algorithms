@@ -13,6 +13,7 @@ void selection_sort(int *array, size_t size)
 
 	for (i = 0; i < size; i++)
 	{
+		y = 0;
 		for (j = i; j < size; j++)
 		{
 			if (array[j] < array[i])
@@ -32,8 +33,8 @@ void selection_sort(int *array, size_t size)
 			array[i] = array[i] ^ array[y];
 			array[y] = array[y] ^ array[i];
 			array[i] = array[i] ^ array[y];
+			print_array(array, size);
 			x = 0;
 		}
-		print_array(array, size);
 	}
 }
